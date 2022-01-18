@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import PhotoCard from "./NasaPhotoCard";
+import PhotoCard from "./PhotoCard";
 
 function PhotoContainer() {	
 	const [nasaPhoto, setNasaPhoto] = useState([]);
 
 	useEffect(() => {
 		axios
-			.get(process.env.API_URL)
+      .get(process.env.API_URL)
 			.then(response => {
 				console.log(response.data);
 				setNasaPhoto(response.data);
